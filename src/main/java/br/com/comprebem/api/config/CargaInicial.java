@@ -1,5 +1,7 @@
-package br.com.comprebem.api;
+package br.com.comprebem.api.config;
 
+import br.com.comprebem.api.entity.Produto;
+import br.com.comprebem.api.repository.ProdutoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -19,10 +21,13 @@ public class CargaInicial implements CommandLineRunner {
         if (repository.count() > 0) return;
 
         repository.save(new Produto("Cadeira Ergonômica Elements Sophy – Preto & Azul",
-                new BigDecimal("2799.00"), 10, "/img/Cadeira-ergonomica-Sophy-Azul.png"));
+                "Cadeira ergonômica com ajuste de altura e apoio lombar.",
+                new BigDecimal("2799.00"), "Cadeiras", "/img/Cadeira-ergonomica-Sophy-Azul.png", 10));
         repository.save(new Produto("Mesa Industrial Grande Escritório Reunião Home Office 190x80",
-                new BigDecimal("655.80"), 5, "/img/mesa-industrial.png"));
+                "Mesa grande em estilo industrial para escritório ou home office.",
+                new BigDecimal("655.80"), "Mesas", "/img/mesa-industrial.png", 5));
         repository.save(new Produto("Luminária Led Com Braço Oscilante Longo",
-                new BigDecimal("79.90"), 15, "/img/luminaria-led.png"));
+                "Luminária de mesa em LED com braço oscilante longo.",
+                new BigDecimal("79.90"), "Iluminação", "/img/luminaria-led.png", 15));
     }
 }
