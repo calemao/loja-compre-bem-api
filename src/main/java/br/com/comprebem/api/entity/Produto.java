@@ -46,6 +46,15 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
+    public void atualizar(String nome, String descricao, BigDecimal preco, String categoria, String imagem, Integer quantidade) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.categoria = categoria;
+        this.imagem = imagem;
+        this.quantidade = quantidade;
+    }
+
     public UUID getId() { return id; }
     public String getNome() { return nome; }
     public String getDescricao() { return descricao; }
